@@ -1,1 +1,0 @@
-# gerryhd.github.io
