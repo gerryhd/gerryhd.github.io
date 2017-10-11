@@ -9,6 +9,10 @@ body{
     padding: 0;
 }
 
+strong{
+    color: #ED7CED;
+}
+
 #logo {
     width: 350px;
     height: 350px;
@@ -19,52 +23,24 @@ body{
     position: relative;
     display: block;
     margin: 30px auto;
-
-
     overflow: hidden;
 }
 
 #small_bio {
     font-size: 14px;
-    padding: 15px;
+
     border: 1px outset #d92b4c;
     border-radius: 12px;
     background-color: #74192a;
-    width: 500px;
-    height: auto;
     color: #E0E0E0;
     margin: 0 auto;
 }
 
-ul.sections {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    overflow: hidden;
-
-}
-
-ul.sections > li {
-    float: left;
-    width: 20%;
-    height: 80px;
-    background-color: #d9d9d9;
-    padding: 15px 15px;
-}
-
-ul.sections > li > a {
-
-    font-size: 16px;
-    color: black;
-    display:block;
+#sections_area {
+    padding: 30px;
     text-align: center;
-    text-decoration: none;
-
-}
-
-#sections-area {
-    display: block;
-    width: 100%;
-    min-width: 650px;
-    float: left;
+    .link{
+        padding: 0 30px;
+        margin: 30px;
+    }
 }
