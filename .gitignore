@@ -4,3 +4,4 @@ _site
 .asset-cache
 doc
 .yardoc
+.lock
