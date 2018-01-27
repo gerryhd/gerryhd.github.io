@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+
+html {
+    overflow: hidden;
+}
+html, body{
+    background-color: #111111;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+strong{
+    color: #54c456;
+    text-shadow: 2px 0 0 #111, -2px 0 0 #111, 0 2px 0 #111, 0 -2px 0 #111, 1px 1px #111, -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111;
+}
+
+a{
+    color: #0000b3;
+}
+
+#logo {
+    position: relative;
+    margin: 10px auto;
+}
+#logo img{
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+#small_bio {
+    font-size: 14px;
+
+    border: 3px solid #7c5e1d;
+    border-radius: 12px;
+    background-color: #cf9c30;
+    color: #3e2f0f;
+    margin: 0 auto;
+}
+
+#sections_area {
+    padding: 10px;
+    text-align: center;
+    .link{
+        padding: 0 30px;
+        margin: 30px;
+    }
+}
+
+#btn-about {
+    background-color: #cccccc;
+    color: #1a1a1a;
+}
+
+#btn-blog{
+    background-color: #333333;
+    color: #FFFFFF;
+    border: #666666;
+}
+#btn-blog:hover, #btn-about:hover{
+    background-color: #0d0d0d;
+    color: #F2F2F2F2;
+    border: ridge 3px #333333;
+}
+
+/* posts */
+
+.post-header {
+    width: 100%;
+    height: 10%;
+    border: outset 3px #666666;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin-top: 2.5%;
+    color: #666666;
+    font-family: 'Coming Soon';
+    position: relative;
+    p {
+        position: absolute;
+        bottom: -40%;
+        left: 5px;
+        font-size: 500%;
+    }
+}
+
+.item-container {
+    border: solid 5px #cf9c30;
+    background-color: #cf9c30;
+    background-image: url(asset-path("posts-bg"));
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+    padding: 20px;
+    border-radius: 5%;
+    span.title {
+        font-family: 'Special Elite';
+        font-size: 300%;
+    }
+    p {
+
+    }
+    hr {
+        background-color: #993300;
+        height: 2px;
+    }
+}
