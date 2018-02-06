@@ -9,14 +9,16 @@
 <body>
   <div class="post-header">
     <p>lionsite</p>
+    <div class="header-logo is-pulled-right">
+      {% img badge %}
+    </div>
   </div>
   <div class="item-container column is-10 is-offset-1">
     <div class="columns">
       <div class="column is-10">
           <span class="title">{{ page.title }}</span>
           <hr>
-        {{ content }}
-
+          <p>{{ content }}</p>
       </div>
       <div class="column is-2">
         <h4>Recent posts</h4>
