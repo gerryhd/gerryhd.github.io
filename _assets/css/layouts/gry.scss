@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
-@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Life+Savers');
 
 html {
     overflow: hidden;
 }
 html, body{
     background-color: #111111;
+    background-image: asset_url("lines1.gif");
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+}
+
+div.content {
+  margin: 0 15%;
 }
 
 strong{
@@ -22,49 +27,44 @@ a{
     color: #0000b3;
 }
 
-#logo {
-    position: relative;
-    margin: 10px auto;
-}
-#logo img{
-    display: block;
-    position: relative;
-    margin: auto;
+h4 {
+  font-family: 'Life Savers', cursive;
+  font-size: 500% !important;
+  margin: 0 !important;
 }
 
-#small_bio {
-    font-size: 14px;
-
-    border: 3px solid #7c5e1d;
-    border-radius: 12px;
-    background-color: #cf9c30;
-    color: #3e2f0f;
-    margin: 0 auto;
-}
-
-#sections_area {
-    padding: 10px;
-    text-align: center;
-    .link{
-        padding: 0 30px;
-        margin: 30px;
+#bio-header {
+    #small_bio {
+        font-size: 14px;
+        color: #004a63;
+    }
+    #logo {
+        img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
     }
 }
 
-#btn-about {
-    background-color: #cccccc;
-    color: #1a1a1a;
+#sections-area {
+  text-align: center;
 }
 
-#btn-blog{
-    background-color: #333333;
-    color: #FFFFFF;
-    border: #666666;
+.my-button {
+  width: 140px;
+  height: 65px;
+  display: inline-block;
 }
-#btn-blog:hover, #btn-about:hover{
-    background-color: #0d0d0d;
-    color: #F2F2F2F2;
-    border: ridge 3px #333333;
+
+#footnote {
+  margin-top: 5%;
+  text-align: center;
+}
+
+#social-media {
+  text-align: center;
+  margin-top : 5%;
 }
 
 /* posts */
@@ -78,7 +78,7 @@ a{
     border-top: 0;
     margin-top: 2.5%;
     color: #666666;
-    font-family: 'Coming Soon';
+    font-family: 'Life Savers', cursive;
     position: relative;
     p {
         position: absolute;
@@ -86,7 +86,7 @@ a{
         left: 5px;
         font-size: 500%;
     }
-    div.header-loogo{
+    div.header-logo{
         img {
             width: 25%;
             height: 25%;
@@ -95,21 +95,25 @@ a{
 }
 
 .item-container {
-    border: solid 5px #ccaa66;
-    background-color: #e6d5b3;
     // background-image: url(asset-path("posts-bg"));
-    width: 100%;
-    height: 100%;
+
     margin-top: 1%;
-    padding: 20px;
-    border-radius: 5%;
     font-family: 'Ubuntu', sans-serif;
     span.title {
         font-family: 'Special Elite';
         font-size: 300%;
     }
-    hr {
+    hr.header-separator {
         background-color: #993300;
         height: 2px;
     }
+}
+
+.content-wrapper {
+  width: 100%;
+}
+
+.post-separator {
+    padding: 10% 0;
+    text-align: center;
 }

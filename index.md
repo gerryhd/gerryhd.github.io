@@ -4,24 +4,42 @@ layout: default
 ---
 
 <div class="content">
-    <div id="logo">
-        {% img badge %}
+    <div id="bio-header" class="columns">
+        <div id="logo" class="column is-one-quarter">
+            <img src="{% asset_path badge.png %}">
+        </div>
+        <div id="small_bio" class="column is-three-quarters.">
+            <h4 id="lionsite">lionsite</h4>
+            <p>
+                Hello! I'm Gerry, and I also go by Lion the Golden. I'm a software engineer and developer from Mexico.
+                I really like programming and music.
+                Welcome to lionsite! My personal website. I'll write stuff and code crap and show it to no one and anybody that visits this page :)
+            </p>
+        </div>
     </div>
-    <div id="small_bio" class="column is-half is-offset-one-quarter">
-        <p>
-            Hello! I'm Gerry, and I also go by Lion the Golden. I'm a software engineer student from Mexico.
-            I really like programming and music.
-            Welcome to <strong>lionsite</strong>, my personal website where I'll probably just upload stuff I'm working on and blog post sometimes.
-            <strong>THIS IS A WIP WEBSITE!</strong> Nothing is final and I'm still working
-            on all things design and stuff. This is really just my playground!
-        </p>
+    <div id="sections-area" class="columns">
+        <div class="column is-8 is-offset-2">
+            <div class="columns">
+                <a href="/blog" id="btn-about" class="column is-4">
+                    <div id="btn-blog" class="my-button">{% img btn-blog %}</div>
+                </a>
+                <a id="btn-about" class="column is-4">
+                    <div id="btn-projects" class="my-button">{% img btn-projects %}</div>
+                </a>
+                <a id="btn-about" class="column is-4">
+                    <div id="btn-about" class="my-button">{% img btn-about %}</div>
+                </a>
+            </div>
+        </div>
     </div>
-    <div id="sections_area" class="column is-half is-offset-one-quarter">
-        <a class="button link is-large" id="btn-about">
-            About Me
-        </a>
-        <a class="button link is-large" id="btn-blog">
-            My Blog
-        </a>
+    <div id="footnote">
+        This website is a work in progress.<br/>
+        If you wanna know my opinion on things, check my blog.<br/>
+        If you wanna know why I'm important, click on projects and check em out.<br/>
+        For work inquiries please click on "About me".
+    </div>
+    <div id="social-media">
+        {% img linkst.gif %}
+        
     </div>
 </div>

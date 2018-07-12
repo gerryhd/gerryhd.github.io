@@ -7,30 +7,30 @@
     {% css layouts/gry %}
 </head>
 <body>
-  <div class="post-header">
-    <p>lionsite</p>
-    <div class="header-logo is-pulled-right">
-      {% img badge %}
+    <div class="post-header">
+        <p>lionsite</p>
+        <div class="header-logo is-pulled-right">
+            <img src="{% asset_path badge.png %}">
+        </div>
     </div>
-  </div>
-  <div class="item-container column is-10 is-offset-1">
-    <div class="columns">
-      <div class="column is-10">
-          <span class="title">{{ page.title }}</span>
-          <hr>
-          <p>{{ content }}</p>
-      </div>
-      <div class="column is-2">
-        <h4>Recent posts</h4>
-        <ul>
-          {% for post in site.posts limit:5 %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title}}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      </div>
-  </div>
+
+        <div class="content-wrapper columns">
+            <div class="column is-7 is-offset-2 item-container">
+                <span class="title">{{ page.title }}</span>
+                <hr>
+                <div>{{ content }}</div>
+            </div>
+            <div class="column is-3">
+                <h2>Recent posts</h2>
+                <ul>
+                    {% for post in site.posts limit:5 %}
+                    <li>
+                        <a href="{{ post.url }}">{{ post.title}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
 </body>
 </html>
