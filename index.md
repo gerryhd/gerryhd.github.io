@@ -20,10 +20,10 @@ layout: default
     <div id="sections-area" class="columns">
         <div class="column is-8 is-offset-2">
             <div class="columns">
-                <a href="/blog" id="btn-about" class="column is-4">
+                <a href="/blog" id="btn-blog" class="column is-4">
                     <div id="btn-blog" class="my-button">{% img btn-blog %}</div>
                 </a>
-                <a id="btn-about" class="column is-4">
+                <a id="btn-projects" class="column is-4">
                     <div id="btn-projects" class="my-button">{% img btn-projects %}</div>
                 </a>
                 <a id="btn-about" class="column is-4">
