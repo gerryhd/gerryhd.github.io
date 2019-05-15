@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Special+Elite');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-@import url('https://fonts.googleapis.com/css?family=Life+Savers');
-
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Signika');
 html {
     overflow: hidden;
 }
@@ -15,40 +12,42 @@ html, body{
 }
 
 div.content {
-  margin: 0 15%;
+  margin: 7% 0%;
 }
 
-strong{
-    color: #54c456;
-    text-shadow: 2px 0 0 #111, -2px 0 0 #111, 0 2px 0 #111, 0 -2px 0 #111, 1px 1px #111, -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111;
-}
 
-a{
-    color: #0000b3;
-}
 
 h4 {
-  font-family: 'Life Savers', cursive;
+  font-family: 'Signika', sans-serif;
   font-size: 500% !important;
   margin: 0 !important;
+  display: inline;
 }
 
 #bio-header {
-    #small_bio {
-        font-size: 14px;
-        color: #004a63;
-    }
-    #logo {
-        img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-        }
-    }
+  font-size: 14px;
+  color: #004a63;
+  margin: 0 29%;
+  #alias {
+    display: inline;
+    font-family: 'Signika', sans-serif;
+    font-size: 200%;
+  }
+  p {
+    display: block;
+    font-size: 16px;
+  }
+  img {
+    float: left;
+    width: 27%;
+    padding-top: 2%;
+  }
+
 }
 
 #sections-area {
   text-align: center;
+  margin: 1% 29%
 }
 
 .my-button {
@@ -58,13 +57,83 @@ h4 {
 }
 
 #footnote {
-  margin-top: 5%;
+  margin-top: 2%;
   text-align: center;
 }
 
 #social-media {
   text-align: center;
-  margin-top : 5%;
+  margin: 5% 29%;
+  a {
+    color: #FFFFFF;
+  }
+  /* pop-up text */
+  a div { 
+    display: inline-block;
+    vertical-align: top;
+    border: solid 2px #004a63;
+    width: 9%;
+    border-radius: 75%;
+    margin-top: 3%;
+    background-color: #62777e
+  }
+
+  a span {
+    color:#666;
+    position:absolute;
+    font-family:sans-serif;
+    bottom:0;
+    left:-25px;
+    right:-25px;
+    padding:5px 7px;
+    z-index:-1;
+    font-size:14px;
+    border-radius:2px;
+    background:#fff;
+    visibility:hidden;
+    opacity:0;
+    -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+
+  /* pop-up text arrow */
+
+  a span:before {
+    content:'';
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position:absolute;
+    bottom:-5px;
+    left:40px;
+  }
+
+  /* text pops up when icon is in hover state */
+
+  a:hover span {
+    bottom:50px;
+    visibility:visible;
+    opacity:1;
+  }
+}
+
+/* About me sheet */
+
+#about-me {
+  background-color: #FFFFFF;
+  border-left: solid 10px #cccccc;
+}
+
+#skills {
+  background-color: #FFFFFF;
+  border-right: solid 4px #DDD000;
+  height: 100%;
+  padding: 3% 2%;
 }
 
 /* posts */
@@ -78,7 +147,7 @@ h4 {
     border-top: 0;
     margin-top: 2.5%;
     color: #666666;
-    font-family: 'Life Savers', cursive;
+    font-family: 'Oxygen', cursive;
     position: relative;
     p {
         position: absolute;
@@ -117,3 +186,18 @@ h4 {
     padding: 10% 0;
     text-align: center;
 }
+
+#overlay {
+    position: fixed; /* Sit on top of the page content *
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 20%;
+    background-color: #e3eee1;
+    text-align: center;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }

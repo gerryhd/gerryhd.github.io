@@ -5,8 +5,55 @@
     <title></title>
     {% css bulma %}
     {% css layouts/gry %}
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </head>
 <body>
+  <div id="overlay">
+    <img src="{% asset_path dance-cat.gif %}">
+  </div>
+  <div class="content">
+    <div id="sections-area" class="columns">
+        <div class="column">
+            <div class="columns">
+                <a href="/blog" id="btn-blog" class="column is-4">
+                    <div id="btn-blog" class="my-button">{% img btn-blog %}</div>
+                </a>
+                <a id="btn-projects" class="column is-4">
+                    <div id="btn-projects" class="my-button">{% img btn-projects %}</div>
+                </a>
+                <a href="#about-me-section" id="btn-about" class="column is-4">
+                    <div id="btn-about" class="my-button">{% img btn-about %}</div>
+                </a>
+            </div>
+        </div>
+    </div>
     {{ content }}
+  </div>
+  <script>
+    $(window).on('load', function(){
+      $('#overlay').fadeOut(2000);
+    });
+
+    $(function() {
+      $('#btn-about').click(function() {
+        var offsetTop = $('#about-me-section').offset().top;
+
+        if (offsetTop) {
+          $('html,body').animate({
+            scrollTop: offsetTop
+          }, 1000);
+
+          return false;
+        }
+      });
+
+    });
+  </script>
 </body>
 </html>

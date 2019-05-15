@@ -1,0 +1,29 @@
+<div style="display: block; padding-bottom: 10%;">
+  <strong style="color: #{{ include.color }}; padding: 1% 0%"> {{ include.name }} </strong>
+  <div class="skill-level">
+  {% for num in (1...5) %}
+    {% if num <= include.grade %}
+    <div class="skill-slot" style="background-color: #{{ include.color }}"> </div>
+    {% else %}
+      {% for ynum in (num...5) %}
+      <div class="skill-slot missing"> </div>
+      {% endfor %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>
+<style>
+  .skill-slot {
+    width: 26px;
+    height:  42px;
+    display: inline-block;
+    border-right: solid 5px #FFFFFF;
+  }
+  .missing {
+    background-color: #c7c7c7
+  }
+  .skill-level {
+    float: right;
+  }
+</style>
