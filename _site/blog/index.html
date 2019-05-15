@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="/assets/bulma.css">
+    <link type="text/css" rel="stylesheet" href="/assets/layouts/gry.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+<body>
+  <div id="overlay">
+    <img src="/assets/dance-cat.gif">
+  </div>
+  <div class="content">
+    <div id="sections-area" class="columns">
+        <div class="column">
+            <div class="columns">
+                <a href="/blog" id="btn-blog" class="column is-4">
+                    <div id="btn-blog" class="my-button"><img src="/assets/btn-blog.png" width="140" height="65" alt="btn-blog.png"></div>
+                </a>
+                <a id="btn-projects" class="column is-4">
+                    <div id="btn-projects" class="my-button"><img src="/assets/btn-projects.png" width="140" height="65" alt="btn-projects.png"></div>
+                </a>
+                <a href="#about-me-section" id="btn-about" class="column is-4">
+                    <div id="btn-about" class="my-button"><img src="/assets/btn-about.png" width="140" height="65" alt="btn-about.png"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="post-header">
+    <p>lionsite</p>
+    <div class="header-logo is-pulled-right">
+        <img src="/assets/badge.png" width="407" height="389" alt="badge.png" />
+    </div>
+</div>
+<div class="content-wrapper columns">
+    <div class="column is-7 is-offset-2 item-container">
+        
+            <a href="/blog/personal/2018/07/11/introduction.html"><span class="title">Introduction: the happening</span></a>
+            <hr class="header-separator" />
+            <div><p>Wow, here I am. Only half a year later since I started working on this project, two designs discarded, and a minimum
+amount of commits, and finally my site is taking shape. An odd shape I’d say, but it’s progress nonetheless! Even now
+I’m</p>
+</div>
+            <div class="post-separator"><img src="/assets/blustar.gif" width="19" height="15" alt="blustar.gif" /></div>
+        
+    </div>
+    <div class="column is-3">
+        <h2>Recent posts</h2>
+        <ul>
+            
+                <li>
+                    <a href="/blog/personal/2018/07/11/introduction.html">Introduction: the happening</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+  </div>
+  <script>
+    $(window).on('load', function(){
+      $('#overlay').fadeOut(2000);
+    });
+
+    $(function() {
+      $('#btn-about').click(function() {
+        var offsetTop = $('#about-me-section').offset().top;
+
+        if (offsetTop) {
+          $('html,body').animate({
+            scrollTop: offsetTop
+          }, 1000);
+
+          return false;
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
